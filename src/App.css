@@ -1,38 +1,220 @@
-.App {
+a:link {
+  color: gold;
+}
+
+a:visited {
+  color: gold;
+}
+
+a:hover {
+  background-color: gold;
+  color: maroon;
+}
+
+a:active {
+  color: gold;
+  background-color: transparent;
+}
+
+.gridContainer {
+  text-align: center;
+  display: grid;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.navigatie {
+  /*width: 98vw;*/
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: maroon;
+  color: gold;
+  height: 10vh;
+  border-bottom: gold 2px solid;
+}
+
+.content {
+  background-color: darkred;
+  color: gold;
+  margin: 10px;
+  padding: 10px;
+  border-width: 1px;
+  border-color: gold;
+  border-style: dotted;
+  border-radius: 4px;
+}
+
+.titel {
+  font-size: 1.8em;
+  height: 10vh;
+}
+
+.titellogo {
+  max-height: 100%;
+  top: 0;
+  transform: translateY(2vh);
+}
+
+.scorelijn {
+  border-top: gold dotted 1px;
+  border-bottom: none;
+}
+
+.scoretabel {
+  width: 100%;
+  font-family: 'Syne Mono', monospace;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .scoretabel {
+    font-size: 0.9em;
+  }
+}
+
+.scoretabel > thead {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.scoretabelklein {
+  font-size: 0.8em !important;
+}
+
+.scoretabel > tbody {
+  font-size: 1em;
+}
+
+.scoretabel > tbody tr {
+  animation: fadeIn linear 1s;
+}
+
+/*.scoretabel > tbody tr:hover {*/
+/*    color: var(--orange)*/
+/*}*/
+
+.scoretabel > tbody td:nth-child(odd) {
+  font-weight: 500;
+}
+
+.scoretabel td {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.over {
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navigatiepijl {
+  color: gold;
+  font-size: 1.5em;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.navigatiepijldisabled {
+  color: darkgrey;
+  font-size: 1.5em;
+  margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigatiepijlen {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigatiepijlen td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.navigatiepijlknipper {
+  animation: knipper 1s infinite;
+}
+
+.navInput {
+  background-color: darkred;
+  /*border: gold 2px solid;*/
+  border: 0;
+  color: gold;
+  font-size: 1em;
+}
+
+.statsKop {
+  cursor: pointer;
+}
+
+.statsLijst {
+  display: none;
+}
+
+.linkslink {
+  text-decoration: unset;
+}
+
+.knop {
+  color: gold;
+  background-color: maroon;
+  font-size: 1em;
+  margin: 1em;
+  clear: both;
+  font-family: 'Syne Mono', monospace;
+  font-weight: 400;
+  visibility: visible;
+}
+
+.prijs {
+  margin-left: 0.4em;
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+.bonus {
+  color: red;
+}
+
+.prijsje {
+  margin-left: 0.3em;
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+.zoekresultaten {
+  background-color: maroon;
+  padding: 5px;
+  border: gold dotted 2px;
+}
+
+.zoekresultaat {
+  color: gold;
+  font-weight: bold;
 }
