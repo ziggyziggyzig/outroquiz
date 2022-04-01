@@ -37,10 +37,8 @@ const Inzendingen = ({deviceWidth}) => {
         const fetchData = async () => {
             let nieuweInzendingen = []
             let snapshot = await getDocs(query(collection(db,"inzendingen"),where("ronde","==",parseInt(dezeRonde,10))))
-            console.log(snapshot.size)
             for (let doc of snapshot.docs) {
                 let data = doc.data()
-                console.log(data)
                 if (data.punten && data.punten > 0) {
                     nieuweInzendingen.push({id: doc.id, ...doc.data()})
                 }
